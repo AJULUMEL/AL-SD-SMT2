@@ -10,19 +10,11 @@ public class Gudang06 {
     }
 
     public boolean cekKosong() {
-        if (top == -1) {
-            return true;
-        } else {
-            return false;
-        }
+        return top == -1;
     }
 
     public boolean cekPenuh() {
-        if (top == size - 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return top == size - 1;
     }
 
     public void tambahBarang(Barang06 brg) {
@@ -60,13 +52,27 @@ public class Gudang06 {
 
     public void tampilkanBarang() {
         if (!cekKosong()) {
-            System.out.println("Rincian tumpukan barang di Gudang");
-            for (int i = 0; i <= top; i++) {
-                System.out.printf("Kode %d: %s(Kategori %s)\n", tumpukan[i].kode, tumpukan[i].nama,
+            System.out.println("Rincian tumpukan barang di Gudang:");
+            for (int i = top; i >= 0; i--) {
+                System.out.printf("Kode %d: %s (Kategori %s)\n", tumpukan[i].kode, tumpukan[i].nama,
                         tumpukan[i].kategori);
             }
         } else {
-            System.out.println("Tumpukan barang kosong.");
+            System.out.println("Tumpukan barang kosong");
+        }
+    }
+
+    public void cariBarang(int kodeCari, String namaCari) {
+        boolean ditemukan = false;
+        for (int i = top; i >= 0; i--) {
+            if (tumpukan[i].kode == kodeCari && tumpukan[i].nama.equals(namaCari)) {
+                System.out.println("Barang ditemukan di tumpukan dengan indeks " + i);
+                ditemukan = true;
+                break;
+            }
+        }
+        if (!ditemukan) {
+            System.out.println("Barang tidak ditemukan di tumpukan");
         }
     }
 }
