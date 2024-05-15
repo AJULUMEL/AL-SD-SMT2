@@ -45,19 +45,30 @@ public class Main {
         int mid = dll.size / 2;
         Node current = dll.head;
 
+        int[] firstHalf = new int[mid];
+        int[] secondHalf = new int[dll.size - mid];
+
         for (int i = 0; i < mid; i++) {
-            list1.addFirst(30);
+            firstHalf[i] = current.data;
             current = current.n;
         }
 
-        while (current != null) {
-            list2.addFirst(50);
+        for (int i = 0; i < dll.size - mid; i++) {
+            secondHalf[i] = current.data;
             current = current.n;
+        }
+
+        for (int i = mid - 1; i >= 0; i--) {
+            list1.addFirst(firstHalf[i]);
+        }
+
+        for (int i = dll.size - mid - 1; i >= 0; i--) {
+            list2.addFirst(secondHalf[i]);
         }
 
         System.out.print("List 1: ");
-        list1.print();
+        list1.print(); 
         System.out.print("List 2: ");
-        list2.print();
+        list2.print(); 
     }
 }
