@@ -38,32 +38,21 @@ public class Main {
     // }
 
     // No. 3 Kode Genap
-    public static void split(DoubleLinkedList dll) {
+    public static void split(DoubleLinkedList dll){
         DoubleLinkedList list1 = new DoubleLinkedList();
         DoubleLinkedList list2 = new DoubleLinkedList();
 
         int mid = dll.size / 2;
         Node current = dll.head;
 
-        int[] firstHalf = new int[mid];
-        int[] secondHalf = new int[dll.size - mid];
-
         for (int i = 0; i < mid; i++) {
-            firstHalf[i] = current.data;
+            list1.addFirst(current.data);
             current = current.n;
         }
 
-        for (int i = 0; i < dll.size - mid; i++) {
-            secondHalf[i] = current.data;
+        for (int i = mid; i < dll.size; i++) {
+            list2.addFirst(current.data);
             current = current.n;
-        }
-
-        for (int i = mid - 1; i >= 0; i--) {
-            list1.addFirst(firstHalf[i]);
-        }
-
-        for (int i = dll.size - mid - 1; i >= 0; i--) {
-            list2.addFirst(secondHalf[i]);
         }
 
         System.out.print("List 1: ");
