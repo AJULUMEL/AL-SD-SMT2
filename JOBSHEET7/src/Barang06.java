@@ -1,5 +1,5 @@
 public class Barang06 {
-    int kode; 
+    int kode;
     String kategori, nama;
 
     Barang06(int kode, String nama, String kategori) {

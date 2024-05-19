@@ -15,9 +15,10 @@ public class Utama06 {
             System.out.println("1. Tambah barang");
             System.out.println("2. Ambil Barang");
             System.out.println("3. Lihat barang teratas");
-            System.out.println("4. Tampilkan tumpukan barang");
-            System.out.println("5. Cari barang");
-            System.out.println("6. Keluar");
+            System.out.println("4. Lihat barang terbawah");
+            System.out.println("5. Tampilkan tumpukan barang");
+            System.out.println("6. Cari barang");
+            System.out.println("7. Keluar");
 
             System.out.print("Pilih operasi: ");
             int pilihan = sc.nextInt();
@@ -42,9 +43,12 @@ public class Utama06 {
                     gudang.lihatBarangTeratas();
                     break;
                 case 4:
-                    gudang.tampilkanBarang();
+                    gudang.lihatBarangTerbawah();
                     break;
                 case 5:
+                    gudang.tampilkanBarang();
+                    break;
+                case 6:
                     System.out.print("Masukkan kode barang yang ingin dicari: ");
                     int kodeCari = sc.nextInt();
                     sc.nextLine();
@@ -52,7 +56,7 @@ public class Utama06 {
                     String namaCari = sc.nextLine();
                     gudang.cariBarang(kodeCari, namaCari);
                     break;
-                case 6:
+                case 7:
                     sc.close();
                     System.exit(0);
                 default:
