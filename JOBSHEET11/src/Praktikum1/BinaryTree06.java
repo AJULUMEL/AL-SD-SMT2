@@ -38,6 +38,74 @@ public class BinaryTree06 {
         }
     }
 
+    void addRecursive(int data) {
+        root = addRecursive(root, data);
+    }
+
+    Node06 addRecursive(Node06 current, int data) {
+        if (current == null) {
+            return new Node06(data);
+        }
+
+        if (data < current.data) {
+            current.left = addRecursive(current.left, data);
+        } else if (data > current.data) {
+            current.right = addRecursive(current.right, data);
+        }
+
+        return current;
+    }
+
+    int findMin() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Tree is empty");
+        }
+        Node06 current = root;
+        while (current.left != null) {
+            current = current.left;
+        }
+        return current.data;
+    }
+
+    int findMax() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Tree is empty");
+        }
+        Node06 current = root;
+        while (current.right != null) {
+            current = current.right;
+        }
+        return current.data;
+    }
+
+    void printLeafNodes() {
+        printLeafNodes(root);
+    }
+
+    void printLeafNodes(Node06 node) {
+        if (node != null) {
+            if (node.left == null && node.right == null) {
+                System.out.print(" " + node.data);
+            }
+            printLeafNodes(node.left);
+            printLeafNodes(node.right);
+        }
+    }
+
+    int countLeafNodes() {
+        return countLeafNodes(root);
+    }
+
+    int countLeafNodes(Node06 node) {
+        if (node == null) {
+            return 0;
+        }
+        if (node.left == null && node.right == null) {
+            return 1;
+        }
+        return countLeafNodes(node.left) + countLeafNodes(node.right);
+    }
+
     boolean find(int data) {
         Node06 current = root;
         while (current != null) {
