@@ -2,27 +2,25 @@ package JOBSHEET10.src.doublelinkedlists;
 
 public class DoubleLinkedListsMain06 {
     public static void main(String[] args) throws Exception{
-        
         DoubleLinkedLists06 dll = new DoubleLinkedLists06();
-        dll.addLast(50);
-        dll.addLast(40);
-        dll.addLast(10);
-        dll.addLast(20);
         dll.print();
+        
         System.out.println("Size : " +dll.size());
         System.out.println("============================");
-        dll.removeFirst();
+        dll.addFirst(3);
+        dll.addLast(4);
+        dll.addFirst(7);
         dll.print();
 
         System.out.println("Size : " +dll.size());
         System.out.println("============================");
-        dll.removeLast();
+        dll.add(40, 1);
         dll.print();
 
         System.out.println("Size : " +dll.size());
         System.out.println("============================");
-        dll.remove(1);
-        dll.print();
-        System.out.println("Size : " +dll.size());
+        System.out.println("Data awal pada Linked Lists adalah : " + dll.getFirst());
+        System.out.println("Data akhir pada Linked Lists adalah : "+dll.getLast());
+        System.out.println("Data indels ke-1 pada Linked Lists adalah : " + dll.get(1));
     }
 }
