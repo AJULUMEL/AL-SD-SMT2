@@ -1,4 +1,4 @@
-package JOBSHEET6.src.P7.P5;
+package JOBSHEET6.src.P5;
 
 public class MergeSortMain06 {
     public static void main(String[] args) {

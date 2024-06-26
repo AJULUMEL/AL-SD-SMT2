@@ -1,4 +1,4 @@
-package JOBSHEET9.src.minggu11.Tugas;
+package JOBSHEET9.src.Tugas;
 
 public class SingleLinkedListMain06 {
     public static void main(String[] args) {

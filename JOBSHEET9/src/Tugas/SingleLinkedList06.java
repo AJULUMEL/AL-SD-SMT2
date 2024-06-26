@@ -1,4 +1,4 @@
-package JOBSHEET9.src.minggu11.Tugas;
+package JOBSHEET9.src.Tugas;
 
 public class SingleLinkedList06 {
     Node06 head;

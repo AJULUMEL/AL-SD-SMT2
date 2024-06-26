@@ -1,4 +1,4 @@
-package JOBSHEET6.src.P7.P5;
+package JOBSHEET6.src.P5;
 
 public class MergeSorting06 {
     public void MergeSort(int[] data) {

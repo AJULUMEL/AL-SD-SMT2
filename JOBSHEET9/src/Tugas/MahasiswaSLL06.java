@@ -1,4 +1,4 @@
-package JOBSHEET9.src.minggu11.Tugas;
+package JOBSHEET9.src.Tugas;
 
 public class MahasiswaSLL06 {
     String nim, nama;

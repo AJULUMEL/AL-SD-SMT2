@@ -1,4 +1,4 @@
-package JOBSHEET6.src.P7.SearchingString;
+package JOBSHEET6.src.SortSearch;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class BukuMain06 {
         int jmlBuku = 5;
 
         System.out.println("================================================================");
-        System.out.println("Masukkan data Buku  : ");
+        System.out.println("Masukkan data Buku : ");
         for (int i = 0; i < jmlBuku; i++) {
             System.out.println("========================");
             System.out.print("Kode Buku \t : ");
@@ -49,6 +49,21 @@ public class BukuMain06 {
         int posisiBin = data.FindBinarySearchStr(cari, 0, jmlBuku - 1);
         data.Tampilposisi(cari, posisiBin);
         data.TampilData(cari, posisiBin);
+
+        System.out.println("Pencarian Judul Buku: ");
+        System.out.print("Masukkan judul buku yang dicari: ");
+        String cariJudul = s1.nextLine();
+
+        System.out.println("Metode Sequential Search");
+        data.sortJudul();
+        int posisiSeqJudul = data.FindSeqSearchJudul(cariJudul);
+        data.Tampilposisi(cariJudul, posisiSeqJudul);
+        data.TampilDataBuku(cariJudul);
+
+        System.out.println("Metode Binary Search");
+        int posisiBinJudul = data.FindBinarySearchJudul(cariJudul, 0, jmlBuku - 1);
+        data.Tampilposisi(cariJudul, posisiBinJudul);
+        data.TampilDataBuku(cariJudul);
 
         s.close();
         s1.close();

@@ -1,4 +1,4 @@
-package JOBSHEET6.src.P7.SortSearch;
+package JOBSHEET6.src.SortSearch;
 
 public class PencarianBuku06 {
     Buku06 listBk[] = new Buku06[5];

@@ -1,4 +1,4 @@
-package JOBSHEET9.src.minggu11.Tugas;
+package JOBSHEET9.src.Tugas;
 
 public class Node06 {
     MahasiswaSLL06 data;
