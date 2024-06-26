@@ -56,8 +56,8 @@ public class DoubleLinkedLists {
                 head = newNode;
             } else {
                 Node newNode = new Node(current.prev, item, current);
-                // newNode.prev = current.prev;
-                // newNode.next = current;
+                newNode.prev = current.prev;
+                newNode.next = current;
                 current.prev.next = newNode;
                 current.prev = newNode;
             }
