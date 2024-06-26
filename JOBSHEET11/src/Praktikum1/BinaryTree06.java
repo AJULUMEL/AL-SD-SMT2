@@ -1,4 +1,4 @@
-package JOBSHEET11.src;
+package JOBSHEET11.src.Praktikum1;
 
 public class BinaryTree06 {
     Node06 root;

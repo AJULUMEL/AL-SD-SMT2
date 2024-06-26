@@ -1,4 +1,4 @@
-package JOBSHEET11.src;
+package JOBSHEET11.src.Praktikum1;
 
 public class BinaryTreeMain06 {
     public static void main(String[] args) {
