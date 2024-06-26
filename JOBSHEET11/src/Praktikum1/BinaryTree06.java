@@ -38,35 +38,6 @@ public class BinaryTree06 {
         }
     }
 
-    /*
-     * void add(int data) {
-     * if (isEmpty()) { // diganti isEmpty
-     * root = new Node06(data);
-     * } else {
-     * Node06 current = root;
-     * while (true) {
-     * if (data < current.data) { // dari > diganti menjadi <
-     * if (current.left == null) {
-     * current.left = new Node06(data);
-     * break;
-     * } else {
-     * current = current.left;
-     * }
-     * } else if (data > current.data) {
-     * if (current.right == null) {
-     * current.right = new Node06(data);
-     * break;
-     * } else {
-     * current = current.right;
-     * }
-     * } else {
-     * break;
-     * }
-     * }
-     * }
-     * }
-     */
-
     boolean find(int data) {
         Node06 current = root;
         while (current != null) {
